@@ -119,8 +119,10 @@
       <AdditionalIncludeDirectories>E:\personal work\learn_engine\StarEngine\StarEngine\Framework\Common;E:\personal work\learn_engine\StarEngine\StarEngine\Framework\Interface;E:\personal work\learn_engine\StarEngine\StarEngine\Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,12 +145,15 @@
     <ClCompile Include="Empty\EmptyApplication.cpp" />
     <ClCompile Include="Framework\Common\BaseApplication.cpp" />
     <ClCompile Include="Framework\Common\main.cpp" />
+    <ClCompile Include="Framework\Common\GraphicsManager.cpp" />
+    <ClCompile Include="Platform\Windows\helloengine_win.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Common\BaseApplication.hpp" />
     <ClInclude Include="Framework\Interface\IApplication.hpp" />
     <ClInclude Include="Framework\Interface\Interface.hpp" />
     <ClInclude Include="Framework\Interface\IRuntimeModule.hpp" />
+    <ClInclude Include="Framework\Common\GraphicsManager.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
