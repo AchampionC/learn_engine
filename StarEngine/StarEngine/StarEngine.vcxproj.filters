@@ -36,7 +36,7 @@
     <ClCompile Include="Framework\Common\GraphicsManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Platform\Windows\helloengine_win.cpp">
+    <ClCompile Include="Platform\Windows\helloengine_d2d.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
