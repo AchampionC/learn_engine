@@ -50,6 +50,17 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 			PostQuitMessage(0);
 			return 0;
 		}
+		case WM_PAINT:
+		{
+			PAINTSTRUCT ps;
+			HDC hdc = BeginPaint(hWnd, &ps);
+			RECT rec = {20, 20, 60, 80};
+			HBRUSH brush = (HBRUSH) GetStockObject(BLACK_BRUSH);
+
+			FillRect(hdc, &rec, brush);
+
+			EndPaint(hWnd, &ps);
+		}
 		break;
 	}
 
